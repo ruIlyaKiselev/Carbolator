@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startScreen">
+
+    <fragment
+        android:id="@+id/startScreen"
+        android:name="com.example.carbolator.StartScreen"
+        android:label="StartScreen" >
+        <action
+            android:id="@+id/fromStartToGame"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.carbolator.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/fromGameToStart"
+            app:destination="@id/startScreen" />
+    </fragment>
+</navigation>
