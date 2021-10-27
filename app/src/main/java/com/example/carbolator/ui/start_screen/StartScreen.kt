@@ -1,18 +1,20 @@
-package com.example.carbolator
+package com.example.carbolator.ui.start_screen
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.example.carbolator.R
 import com.example.carbolator.databinding.FragmentStartScreenBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class StartScreen : Fragment() {
 
     private lateinit var binding: FragmentStartScreenBinding

@@ -6,8 +6,10 @@
         <entry key="..\:/Users/ruily_g40rtk5/Downloads/Carbolator/app/src/main/res/drawable/custom_button.xml" value="0.23941368078175895" />
         <entry key="..\:/Users/ruily_g40rtk5/Downloads/Carbolator/app/src/main/res/drawable/rounded_corner.xml" value="0.23941368078175895" />
         <entry key="..\:/Users/ruily_g40rtk5/Downloads/Carbolator/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/ruily_g40rtk5/Downloads/Carbolator/app/src/main/res/layout/fragment_game.xml" value="0.25" />
+        <entry key="..\:/Users/ruily_g40rtk5/Downloads/Carbolator/app/src/main/res/layout/fragment_game.xml" value="0.16" />
         <entry key="..\:/Users/ruily_g40rtk5/Downloads/Carbolator/app/src/main/res/layout/fragment_start_screen.xml" value="0.16" />
+        <entry key="..\:/Users/ruily_g40rtk5/Downloads/Carbolator/app/src/main/res/layout/multiple_answer_item.xml" value="0.18" />
+        <entry key="..\:/Users/ruily_g40rtk5/Downloads/Carbolator/app/src/main/res/layout/one_answer_item.xml" value="0.1331081081081081" />
       </map>
     </option>
   </component>

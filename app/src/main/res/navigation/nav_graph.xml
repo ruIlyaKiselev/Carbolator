@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/startScreen"
-        android:name="com.example.carbolator.StartScreen"
+        android:name="com.example.carbolator.ui.start_screen.StartScreen"
         android:label="StartScreen" >
         <action
             android:id="@+id/fromStartToGame"
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
-        android:name="com.example.carbolator.GameFragment"
+        android:name="com.example.carbolator.ui.game_screen.GameFragment"
         android:label="fragment_game"
         tools:layout="@layout/fragment_game" >
         <action
