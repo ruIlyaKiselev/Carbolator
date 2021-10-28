@@ -67,7 +67,7 @@ class CarbolatorRepositoryImpl: CarbolatorRepository {
                         "До 9000 км (как Москва–Владивосток)",
                         "До 17500 км (как Москва–Веллингтон)"
                     ),
-                    type = QuestionType.MultipleAnswer,
+                    type = QuestionType.SelectorsAnswer,
                     nextQuestionId = -1
                 )
             )

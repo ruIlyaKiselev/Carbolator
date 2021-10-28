@@ -64,7 +64,7 @@ class MultipleAnswerItem: Fragment() {
                     )
                 )
 
-                checkBoxToAdd.textSize = 20f
+                checkBoxToAdd.textSize = 16f
                 checkBoxToAdd.text = questionText
 
                 checkBoxToAdd.setOnClickListener {

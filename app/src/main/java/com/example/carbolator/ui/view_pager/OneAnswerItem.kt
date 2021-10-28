@@ -2,15 +2,14 @@ package com.example.carbolator.ui.view_pager
 
 import android.annotation.SuppressLint
 import android.content.res.ColorStateList
-import android.util.Log
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.core.content.ContextCompat
-import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import com.example.carbolator.R
 import com.example.carbolator.databinding.OneAnswerItemBinding
@@ -64,7 +63,7 @@ class OneAnswerItem: Fragment() {
                     )
                 )
 
-                radioButtonToAdd.textSize = 20f
+                radioButtonToAdd.textSize = 16f
                 radioButtonToAdd.text = questionText
 
                 oneAnswerRadioGroup.addView(radioButtonToAdd)

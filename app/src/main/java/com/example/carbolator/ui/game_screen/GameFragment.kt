@@ -37,11 +37,11 @@ class GameFragment : Fragment() {
         binding.gameScreenViewPager.adapter = viewPagerAdapter
 
         viewModel.questions.observe(viewLifecycleOwner) {
-            it.forEach { question ->
-                questions.addAll(it)
-                viewPagerAdapter.notifyDataSetChanged()
-            }
+            questions.addAll(it)
+            viewPagerAdapter.notifyDataSetChanged()
         }
+
+        configureArrows()
 
         return view
     }
@@ -49,5 +49,35 @@ class GameFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         viewModel.loadQuestions()
+    }
+
+    private fun configureArrows() {
+
+        binding.apply {
+            gameScreenNextButton.setOnClickListener {
+                val currentItemNumber = gameScreenViewPager.currentItem
+                val totalItemsNumber = viewPagerAdapter.itemCount - 1
+
+                if (currentItemNumber < totalItemsNumber) {
+                    gameScreenViewPager.currentItem = currentItemNumber + 1
+                }
+                else {
+                    binding.apply {
+                        gameScreenCardView.visibility = View.GONE
+                        gameScreenFinalButton.visibility = View.VISIBLE
+                    }
+                }
+            }
+        }
+
+        binding.apply {
+            gameScreenPrevButton.setOnClickListener {
+                val currentItemNumber = gameScreenViewPager.currentItem
+
+                if (currentItemNumber > 0)
+                    gameScreenViewPager.currentItem = currentItemNumber - 1
+            }
+        }
+
     }
 }
