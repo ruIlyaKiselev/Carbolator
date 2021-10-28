@@ -1,14 +1,514 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.finish_fragment.FinishFragment">
+    android:fillViewport="true">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@drawable/background3"
+        tools:context=".ui.finish_fragment.FinishFragment">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/finishScreenSunImage"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:src="@drawable/sun"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/finishScreenIcebergImage"
+            android:layout_width="150dp"
+            android:layout_height="350dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/iceberg3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finishScreenSunImage" />
+
+
+        <ImageView
+            android:id="@+id/finishScreenIcon1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="32dp"
+            android:src="@drawable/meat"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/finishScreenSunImage" />
+
+        <ImageView
+            android:id="@+id/finishScreenIcon2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/food"
+            app:layout_constraintBottom_toTopOf="@+id/finishScreenIcon3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finishScreenIcon1" />
+
+        <ImageView
+            android:id="@+id/finishScreenIcon3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/trash"
+            app:layout_constraintBottom_toTopOf="@+id/finishScreenIcon4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finishScreenIcon2" />
+
+        <ImageView
+            android:id="@+id/finishScreenIcon4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/products"
+            app:layout_constraintBottom_toTopOf="@+id/finishScreenIcon5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finishScreenIcon3" />
+
+        <ImageView
+            android:id="@+id/finishScreenIcon5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_car"
+            app:layout_constraintBottom_toTopOf="@+id/finishScreenIcon6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finishScreenIcon4" />
+
+        <ImageView
+            android:id="@+id/finishScreenIcon6"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/motorbike"
+            app:layout_constraintBottom_toTopOf="@+id/finishScreenIcon7"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finishScreenIcon5" />
+
+        <ImageView
+            android:id="@+id/finishScreenIcon7"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_bus"
+            app:layout_constraintBottom_toTopOf="@+id/finishScreenIcon8"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finishScreenIcon6" />
+
+        <ImageView
+            android:id="@+id/finishScreenIcon8"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/train"
+            app:layout_constraintBottom_toTopOf="@+id/finishScreenIcon9"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finishScreenIcon7" />
+
+        <ImageView
+            android:id="@+id/finishScreenIcon9"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/trolleybus"
+            app:layout_constraintBottom_toTopOf="@+id/finishScreenIcon10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finishScreenIcon8" />
+
+        <ImageView
+            android:id="@+id/finishScreenIcon10"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_aiplane"
+            app:layout_constraintBottom_toTopOf="@+id/finishScreenIcon11"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finishScreenIcon9" />
+
+        <ImageView
+            android:id="@+id/finishScreenIcon11"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/house2"
+            app:layout_constraintBottom_toTopOf="@+id/finishScreenIcon12"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finishScreenIcon10" />
+
+        <ImageView
+            android:id="@+id/finishScreenIcon12"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/townhouse"
+            app:layout_constraintBottom_toTopOf="@+id/finishScreenIcon13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finishScreenIcon11" />
+
+        <ImageView
+            android:id="@+id/finishScreenIcon13"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/house"
+            app:layout_constraintBottom_toTopOf="@+id/finishScreenIcon14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finishScreenIcon12" />
+
+        <ImageView
+            android:id="@+id/finishScreenIcon14"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/flat"
+            app:layout_constraintBottom_toTopOf="@+id/finishScreenIcon15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finishScreenIcon13" />
+
+        <ImageView
+            android:id="@+id/finishScreenIcon15"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/tech"
+            app:layout_constraintBottom_toTopOf="@+id/finishScreenIcon16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finishScreenIcon14" />
+
+        <ImageView
+            android:id="@+id/finishScreenIcon16"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_clothes"
+            app:layout_constraintBottom_toTopOf="@+id/finishScreenIcon17"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finishScreenIcon15" />
+
+        <ImageView
+            android:id="@+id/finishScreenIcon17"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/pets"
+            app:layout_constraintBottom_toTopOf="@+id/finishScreenIcon18"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finishScreenIcon16" />
+
+        <ImageView
+            android:id="@+id/finishScreenIcon18"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/health"
+            app:layout_constraintBottom_toTopOf="@+id/finishScreenIcon19"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finishScreenIcon17" />
+
+        <ImageView
+            android:id="@+id/finishScreenIcon19"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/tv"
+            app:layout_constraintBottom_toTopOf="@+id/finishScreenIcon20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finishScreenIcon18" />
+
+        <ImageView
+            android:id="@+id/finishScreenIcon20"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/recycling"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finishScreenIcon19" />
+
+        <TextView
+            android:id="@+id/finishScreenTotalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenSunImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenIcon1"
+            app:layout_constraintStart_toEndOf="@+id/finishScreenIcon1"
+            app:layout_constraintTop_toTopOf="@+id/finishScreenIcon1" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenIcon2"
+            app:layout_constraintEnd_toEndOf="@+id/textView7"
+            app:layout_constraintTop_toTopOf="@+id/finishScreenIcon2" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenIcon3"
+            app:layout_constraintEnd_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toTopOf="@+id/finishScreenIcon3" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenIcon4"
+            app:layout_constraintEnd_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/finishScreenIcon4" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenIcon5"
+            app:layout_constraintEnd_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="@+id/finishScreenIcon5" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenIcon6"
+            app:layout_constraintEnd_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toTopOf="@+id/finishScreenIcon6" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenIcon7"
+            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/finishScreenIcon7" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenIcon8"
+            app:layout_constraintEnd_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toTopOf="@+id/finishScreenIcon8" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenIcon9"
+            app:layout_constraintEnd_toEndOf="@+id/textView9"
+            app:layout_constraintTop_toTopOf="@+id/finishScreenIcon9" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenIcon10"
+            app:layout_constraintEnd_toEndOf="@+id/textView10"
+            app:layout_constraintTop_toTopOf="@+id/finishScreenIcon10" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenIcon11"
+            app:layout_constraintEnd_toEndOf="@+id/textView11"
+            app:layout_constraintTop_toTopOf="@+id/finishScreenIcon11" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenIcon12"
+            app:layout_constraintEnd_toEndOf="@+id/textView12"
+            app:layout_constraintTop_toTopOf="@+id/finishScreenIcon12" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenIcon13"
+            app:layout_constraintEnd_toEndOf="@+id/textView13"
+            app:layout_constraintTop_toTopOf="@+id/finishScreenIcon13" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenIcon14"
+            app:layout_constraintEnd_toEndOf="@+id/textView14"
+            app:layout_constraintTop_toTopOf="@+id/finishScreenIcon14" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenIcon15"
+            app:layout_constraintEnd_toEndOf="@+id/textView15"
+            app:layout_constraintTop_toTopOf="@+id/finishScreenIcon15" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenIcon16"
+            app:layout_constraintEnd_toEndOf="@+id/textView16"
+            app:layout_constraintTop_toTopOf="@+id/finishScreenIcon16" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenIcon17"
+            app:layout_constraintEnd_toEndOf="@+id/textView17"
+            app:layout_constraintTop_toTopOf="@+id/finishScreenIcon17" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenIcon18"
+            app:layout_constraintEnd_toEndOf="@+id/textView18"
+            app:layout_constraintTop_toTopOf="@+id/finishScreenIcon18" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenIcon19"
+            app:layout_constraintEnd_toEndOf="@+id/textView19"
+            app:layout_constraintTop_toTopOf="@+id/finishScreenIcon19" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="0.00 т"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finishScreenIcon20"
+            app:layout_constraintEnd_toEndOf="@+id/textView20"
+            app:layout_constraintTop_toTopOf="@+id/finishScreenIcon20" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

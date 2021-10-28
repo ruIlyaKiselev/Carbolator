@@ -6,14 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.carbolator.R
+import com.example.carbolator.databinding.FragmentFinishBinding
+import com.example.carbolator.databinding.FragmentGameBinding
 
 class FinishFragment : Fragment() {
+
+    private lateinit var binding: FragmentFinishBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_finish, container, false)
+    ): View {
+
+        binding = FragmentFinishBinding.inflate(layoutInflater)
+        val view = binding.root
+
+        return view
     }
 }

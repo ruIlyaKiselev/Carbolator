@@ -19,7 +19,11 @@
         android:label="fragment_game"
         tools:layout="@layout/fragment_game" >
         <action
-            android:id="@+id/fromGameToStart"
-            app:destination="@id/startScreen" />
+            android:id="@+id/fromGameToFinish"
+            app:destination="@id/finishFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/finishFragment"
+        android:name="com.example.carbolator.ui.finish_fragment.FinishFragment"
+        android:label="FinishFragment" />
 </navigation>
