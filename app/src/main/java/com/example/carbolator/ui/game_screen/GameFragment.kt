@@ -29,7 +29,11 @@ class GameFragment : Fragment() {
         binding = FragmentGameBinding.inflate(layoutInflater)
         val view = binding.root
 
-        viewPagerAdapter = ViewPagerAdapter(this, questions)
+        viewPagerAdapter = ViewPagerAdapter(
+            this,
+            questions,
+            viewModel::putAnswer
+        )
         binding.gameScreenViewPager.adapter = viewPagerAdapter
 
         viewModel.questions.observe(viewLifecycleOwner) {

@@ -9,7 +9,8 @@ import com.example.carbolator.domain.QuestionType
 
 class ViewPagerAdapter(
     fragment: Fragment,
-    val data: MutableList<Question>
+    val data: MutableList<Question>,
+    val answerCallback: (Int, List<String>) -> Unit
 ): FragmentStateAdapter(fragment) {
 
     override fun createFragment(position: Int): Fragment {
@@ -23,13 +24,15 @@ class ViewPagerAdapter(
                 val fragment = OneAnswerItem()
                 fragment.arguments = Bundle()
                 fragment.arguments?.putParcelable("question", question)
+                fragment.arguments?.putParcelable("listener", AnswerSelectListener(answerCallback))
                 return fragment
             }
 
             QuestionType.MultipleAnswer -> {
-                val fragment = OneAnswerItem()
+                val fragment = MultipleAnswerItem()
                 fragment.arguments = Bundle()
                 fragment.arguments?.putParcelable("question", question)
+                fragment.arguments?.putParcelable("listener", AnswerSelectListener(answerCallback))
                 return fragment
             }
 
@@ -37,6 +40,7 @@ class ViewPagerAdapter(
                 val fragment = OneAnswerItem()
                 fragment.arguments = Bundle()
                 fragment.arguments?.putParcelable("question", question)
+                fragment.arguments?.putParcelable("listener", AnswerSelectListener(answerCallback))
                 return fragment
             }
         }

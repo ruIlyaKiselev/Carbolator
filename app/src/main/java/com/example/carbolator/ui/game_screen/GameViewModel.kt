@@ -21,6 +21,8 @@ class GameViewModel @Inject constructor(
     private var mutableQuestions = MutableLiveData<List<Question>>()
     val questions: LiveData<List<Question>> = mutableQuestions
 
+    private val selectedAnswers: MutableMap<Int, List<String>> = mutableMapOf()
+
     fun loadQuestions() {
 
         val handler = CoroutineExceptionHandler { _, exception ->
@@ -31,4 +33,13 @@ class GameViewModel @Inject constructor(
             mutableQuestions.postValue(repository.getQuestions())
         }
     }
+
+    fun putAnswer(questionId: Int, questionList: List<String>) {
+        selectedAnswers[questionId] = questionList
+        selectedAnswers.forEach {
+            Log.d("MyLog", it.toString())
+        }
+    }
+
+    fun getAnswersList(): Map<Int, List<String>> = selectedAnswers
 }

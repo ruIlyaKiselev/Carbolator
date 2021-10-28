@@ -5,5 +5,6 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class Answer (
-    val id: Int
+    val id: Int,
+    val selectedAnswers: List<String>
 ): Parcelable
