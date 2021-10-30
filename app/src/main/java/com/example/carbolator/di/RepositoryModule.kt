@@ -1,5 +1,6 @@
 package com.example.carbolator.di
 
+import com.example.carbolator.network.CarbolatorService
 import com.example.carbolator.repository.CarbolatorRepository
 import com.example.carbolator.repository.CarbolatorRepositoryImpl
 import dagger.Module
@@ -15,8 +16,8 @@ object RepositoryModule {
     @Singleton
     @Provides
     fun provideCarbolatorRepository(
-//        carbolatorService: CarbolatorService
+        carbolatorService: CarbolatorService
     ): CarbolatorRepository {
-        return CarbolatorRepositoryImpl()
+        return CarbolatorRepositoryImpl(carbolatorService)
     }
 }

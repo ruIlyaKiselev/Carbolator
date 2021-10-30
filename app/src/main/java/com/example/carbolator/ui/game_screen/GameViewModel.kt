@@ -15,7 +15,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class GameViewModel @Inject constructor(
-    val repository: CarbolatorRepository
+    private val repository: CarbolatorRepository
 ): ViewModel() {
 
     private var mutableQuestions = MutableLiveData<List<Question>>()
