@@ -3,17 +3,15 @@ package com.example.carbolator.network.model.question
 
 import com.google.gson.annotations.SerializedName
 
-data class QuestionDtoItem(
+data class QuestionsDtoItem(
     @SerializedName("answers")
-    val possibleAnswersList: List<PossibleAnswer>?,
-    @SerializedName("max_value")
-    val maxValue: Int?,
-    @SerializedName("min_value")
-    val minValue: Int?,
+    val answerComponents: List<AnswerComponent>?,
+    @SerializedName("id")
+    val id: Int?,
     @SerializedName("next_question_id")
     val nextQuestionId: Int?,
-    @SerializedName("question_id")
-    val questionId: Int?,
+    @SerializedName("text")
+    val text: String?,
     @SerializedName("type_answer")
     val typeAnswer: String?
 )

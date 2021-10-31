@@ -3,9 +3,9 @@ package com.example.carbolator.network.model.question
 
 import com.google.gson.annotations.SerializedName
 
-data class PossibleAnswer(
-    @SerializedName("next_question_limit_id")
-    val nextQuestionLimitId: Int?,
+data class AnswerComponent(
+    @SerializedName("next_question_id")
+    val nextQuestionId: Any?,
     @SerializedName("text")
     val text: String?
 )

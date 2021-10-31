@@ -7,9 +7,9 @@ import retrofit2.http.POST
 
 interface CarbolatorService {
 
-    @GET("questions")
+    @GET("questions/all")
     suspend fun getAllQuestions(): QuestionsDto
 
-    @POST("storeAnswers")
+    @POST("questions/create")
     suspend fun postAnswers(answers: List<AnswerDto>)
 }

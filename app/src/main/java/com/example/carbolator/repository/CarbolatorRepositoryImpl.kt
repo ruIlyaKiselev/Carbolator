@@ -1,17 +1,20 @@
 package com.example.carbolator.repository
 
 import com.example.carbolator.domain.Answer
+import com.example.carbolator.domain.Mappers.toDomain
 import com.example.carbolator.domain.Question
 import com.example.carbolator.domain.QuestionType
 import com.example.carbolator.network.CarbolatorService
 import javax.inject.Inject
 
 class CarbolatorRepositoryImpl(
-    carbolatorService: CarbolatorService
+    val carbolatorService: CarbolatorService
 ): CarbolatorRepository {
 
     override suspend fun getQuestions(): List<Question> {
-        return generateTestQuestions()
+        val result = carbolatorService.getAllQuestions()
+
+        return result.toDomain()
     }
 
     override suspend fun postAnswers(answers: List<Answer>) {

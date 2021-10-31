@@ -1,4 +1,6 @@
 package com.example.carbolator.network.model.question
 
 
-class QuestionsDto : ArrayList<QuestionDtoItem>()
+import com.google.gson.annotations.SerializedName
+
+class QuestionsDto : ArrayList<QuestionsDtoItem>()
